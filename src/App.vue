@@ -1,10 +1,11 @@
 <script setup lang="ts">
-	import Navbar from './navbar.vue';
-	import Buttons from './buttons.vue';
+	import Navbar from './components/navbar.vue';
+	import Buttons from './components/buttons.vue';
 </script>
 
 <template>
 	<Navbar/>
+	<h1>House of Sydney</h1>
 	<div>
 		<router-view></router-view>
 	</div>
