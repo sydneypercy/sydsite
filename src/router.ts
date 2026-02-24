@@ -1,15 +1,23 @@
-import { createMemoryHistory, createRouter } from "vue-router";
+import { createWebHistory, createRouter } from "vue-router";
+import HomeView from "@/views/home.vue";
+import AboutView from "@/views/about.vue";
+import SocialView from "@/views/socials.vue";
+import NotFoundView from "./views/notfound.vue";
 
-import HomeView from "./home.vue";
-import AboutView from "./about.vue";
-import SocialView from "./socials.vue";
 const routes = [
-    { path: "/", component: HomeView },
-    { path: "/about", component: AboutView },
-    { path: "/socials", component: SocialView }
+    { path: "/", name: "home", component: HomeView },
+    { path: "/about", name: "about", component: AboutView },
+    { path: "/socials", name: "socials", component: SocialView },
+    {
+        path: "/:pathMatch(.*)*",
+        name: "not-found",
+        component: NotFoundView
+    }
 ];
 
 export const router = createRouter({
-    history: createMemoryHistory(),
+    history: createWebHistory(import.meta.env.BASE_URL),
     routes
 });
+
+export default router;
