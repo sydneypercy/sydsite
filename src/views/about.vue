@@ -20,7 +20,7 @@
 		"a drainer",
 		"a hyperpop/hyperflip fan",
 		"a rhythm gamer",
-		"an index proselyte", 
+		"an index proxy", 
 		"able to speak toki pona",
 		"an arch linux user",
 		"insignificant in this big universe",
